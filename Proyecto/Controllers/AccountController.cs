@@ -1,25 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Proyecto.Models.User;
 
 namespace Proyecto.Controllers
 {
+    [Route("[controller]")]
     public class AccountController : Controller
     {
-        [HttpGet]
+        [HttpGet("[action]")]
         public IActionResult Login()
         {
             return View();
         }
-        [HttpPost]
+        [HttpPost("[action]")]
         public IActionResult Login(User user)
         {
             return View();
         }
-        [HttpGet]
+        [HttpGet("[action]")]
         public IActionResult Register()
         {
             return View();
         }
-        [HttpPost]
+        [HttpPost("[action]")]
         public IActionResult Register(User user)
         {
             return View();
