@@ -19,11 +19,14 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        <li class="nav-item @((ViewBag.CurrentView == "Home_Index") ? "active" : "")">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item @((ViewBag.CurrentView == "Privacy") ? "active" : "")">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item @((ViewBag.CurrentView == "Stats_Index") ? "active" : "")">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Stats" asp-action="Index">Stats</a>
                         </li>
                     </ul>
                 </div>
@@ -31,6 +34,7 @@
         </nav>
     </header>
     <div class="container">
+        @RenderSection("SecondaryLayout", required: false)
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

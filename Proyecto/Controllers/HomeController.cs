@@ -15,11 +15,13 @@ namespace Proyecto.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.CurrentView = "Home_Index";
             return View();
         }
 
         public IActionResult Privacy()
         {
+            ViewBag.CurrentView = "Privacy";
             return View();
         }
 
