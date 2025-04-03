@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Proyecto.Models.User;
 
 namespace Proyecto.Controllers
 {
@@ -11,7 +12,7 @@ namespace Proyecto.Controllers
             ViewBag.SecondaryLayout = "_StatsLayout";
             ViewBag.CurrentView = "Stats_Index";
             ViewBag.SecView = "Stats_Index";
-            return View();
+            return View(/*Object for Tests*/ new UserViewModel());
         }
         [HttpGet("[action]")]
         public IActionResult Saves()
@@ -19,7 +20,7 @@ namespace Proyecto.Controllers
             ViewBag.SecondaryLayout = "_StatsLayout";
             ViewBag.CurrentView = "Stats_Index";
             ViewBag.SecView = "Stats_Saves";
-            return View();
+            return View(/*Object for Tests*/ new UserContent());
         }
     }
 }

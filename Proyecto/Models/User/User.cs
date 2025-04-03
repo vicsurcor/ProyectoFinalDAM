@@ -2,10 +2,10 @@
 {
     public class User
     {
-        public int Id { get; set; }
-        public string UserName { get; set; }
-        public string UserEmail { get; set; }
-        public string Password { get; set; }
-        public string UserRole { get; set; }
+        public int Id { get; set; } = 1;
+        public string UserName { get; set; } = "TestUser";
+        public string UserEmail { get; set; } = "TestUserEmail@test.com";
+        public string Password { get; set; } = "TestPassword";
+        public UserRole UserRole { get; set; } = UserRole.GetUserRole("Client");
     }
 }
