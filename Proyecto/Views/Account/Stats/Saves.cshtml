@@ -9,6 +9,17 @@
 @if (ViewBag.SecondaryLayout != null)
 {
     @section SecondaryLayout {
-    <partial name="@(ViewBag.SecondaryLayout)"></partial>
+        <partial name="@(ViewBag.SecondaryLayout)"></partial>
     }
 }
+
+<div class="saves-content">
+    @foreach (var save in Model.Saves)
+    {
+        <div class="save">
+            @Html.LabelFor(m => save, "Save: ",new {@class = "save-label"})   
+            <br />
+            @Html.ActionLink(save.Value.Name, "")
+        </div>
+    }
+</div>
