@@ -2,9 +2,9 @@
 {
     public class UserViewModel
     {
-        public User user { get; set; }
+        public User User { get; set; }
 
-        public UserContent userContent { get; set; }
+        public UserContent UserContent { get; set; }
 
     }
 
