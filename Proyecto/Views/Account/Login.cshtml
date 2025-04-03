@@ -1,17 +1,27 @@
-﻿@{
+﻿@using Proyecto.Models.User;
+
+@{
     ViewData["Title"] = "Login";
 }
+@model UserViewModel;
+<head>
+    <styles>
+        <link href="~/css/Account.css" rel="stylesheet" />
+    </styles>
+</head>
 
 <h2>Login</h2>
+<hr />
 
 <form method="post" action="/Account/Login">
     <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" name="username" required>
+        @Html.LabelFor(m => m.User.UserName, "Username: ")
+        @Html.TextBoxFor(m => m.User.UserName, new { @class = "form-control", placeholder = "Insert your username here. "})
     </div>
     <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" name="password" required>
+        @Html.LabelFor(m => m.User.Password, "Password: ")
+        @Html.PasswordFor(m => m.User.Password, new { @class = "form-control", placeholder = "Insert your password here. " })
     </div>
-    <button type="submit" class="btn btn-primary">Login</button>
+    <br />
+    @Html.ActionLink("Log in", "Login", "AccountController", null, new {@class = "btn btn-primary"})
 </form>
