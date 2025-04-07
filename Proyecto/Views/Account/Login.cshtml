@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Login";
 }
-@model UserViewModel;
+@model User;
 <head>
     <styles>
         <link href="~/css/Account.css" rel="stylesheet" />
@@ -16,15 +16,15 @@
 <form method="post" action="/Account/Login">
 
     <div class="form-group">
-        @Html.LabelFor(m => m.User.UserName, "Username: ")
+        @Html.LabelFor(m => m.UserName, "Username: ")
         <hr />
-        @Html.TextBoxFor(m => m.User.UserName, new { @class = "form-control", placeholder = "Insert your username here. "})
+        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Insert your username here. "})
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.User.Password, "Password: ")
+        @Html.LabelFor(m => m.Password, "Password: ")
         <hr />
-        @Html.PasswordFor(m => m.User.Password, new { @class = "form-control", placeholder = "Insert your password here. " })
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Insert your password here. " })
     </div>
     <br />
-    @Html.ActionLink("Log in", "Login", "AccountController", null, new {@class = "btn btn-primary"})
+    <input type="submit" value="Log in" class="btn btn-primary" />
 </form>
