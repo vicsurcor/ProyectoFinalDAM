@@ -5,7 +5,8 @@
     height: 50%;
     border-radius: 20px;
     border: 1px groove black;
-    
+    grid-template-areas:
+        "1 2 3"
 }
 .stats-content hr[b-4h2w8ev0za] {
     margin: 2px 0px 20px 0px

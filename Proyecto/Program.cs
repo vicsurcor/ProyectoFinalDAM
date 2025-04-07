@@ -3,6 +3,13 @@ using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//TODO: Authentication Error Pages
+//TODO: Authentication Tokens
+//TODO: User Encription / Hashing
+//TODO: Connection
+//TODO: *ViewChanges
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.Configure<RazorViewEngineOptions>(options =>
@@ -11,6 +18,7 @@ builder.Services.Configure<RazorViewEngineOptions>(options =>
 }
 );
 
+builder.Services.AddSession();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -33,6 +41,8 @@ app.UseStaticFiles(new StaticFileOptions
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
