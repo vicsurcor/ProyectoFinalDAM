@@ -68,3 +68,7 @@ C:\Users\v.suros\source\repos\vicsurcor\ProyectoFinalDAM\Proyecto\obj\Debug\net8
 C:\Users\v.suros\source\repos\vicsurcor\ProyectoFinalDAM\Proyecto\obj\Debug\net8.0\Proyecto.genruntimeconfig.cache
 C:\Users\v.suros\source\repos\vicsurcor\ProyectoFinalDAM\Proyecto\obj\Debug\net8.0\ref\Proyecto.dll
 C:\Users\v.suros\source\repos\vicsurcor\ProyectoFinalDAM\Proyecto\obj\Debug\net8.0\scopedcss\Views\Home\Index.cshtml.rz.scp.css
+C:\Users\v.suros\source\repos\vicsurcor\ProyectoFinalDAM\Proyecto\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\v.suros\source\repos\vicsurcor\ProyectoFinalDAM\Proyecto\obj\Debug\net8.0\Proyecto.csproj.AssemblyReference.cache
+C:\Users\v.suros\source\repos\vicsurcor\ProyectoFinalDAM\Proyecto\obj\Debug\net8.0\Proyecto.csproj.Up2Date
+C:\Users\v.suros\source\repos\vicsurcor\ProyectoFinalDAM\Proyecto\obj\Debug\net8.0\scopedcss\Views\Account\Stats\Index.cshtml.rz.scp.css

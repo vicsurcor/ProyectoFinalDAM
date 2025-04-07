@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yx/jIsnQQHsjHX3xcdaMhi1i6snwDkWdjuoHSbnI384=",
+  "Hash": "vxYoTa3emF+9+MXhV2dGnWvPnNMfk2B7x55OzhiXkik=",
   "Source": "Proyecto",
   "BasePath": "_content/Proyecto",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "skx3st3spk",
-      "Integrity": "RNPl647EGraL3z5N72MofdbxdRmmImtQs039anslsBw=",
+      "Fingerprint": "ezn14dka6q",
+      "Integrity": "qsdbg5ZVuPINEWMZldYE2rVYbrRjet6E7q9xBpnkWZ0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Proyecto.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "skx3st3spk",
-      "Integrity": "RNPl647EGraL3z5N72MofdbxdRmmImtQs039anslsBw=",
+      "Fingerprint": "ezn14dka6q",
+      "Integrity": "qsdbg5ZVuPINEWMZldYE2rVYbrRjet6E7q9xBpnkWZ0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Proyecto.bundle.scp.css"
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9sv7j1uhgl",
-      "Integrity": "qVPRMOoIIxQHPIa564d69oJvY9wuAhKVX98I69SRHtM=",
+      "Fingerprint": "fsffnw8btr",
+      "Integrity": "Ucu0Rick7c7FOtd+9gN9zboG9F5IeeT+xBEBqdxQNYM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Account.css"
@@ -1342,51 +1342,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/Account.9sv7j1uhgl.css",
-      "AssetFile": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\wwwroot\\css\\Account.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "137"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qVPRMOoIIxQHPIa564d69oJvY9wuAhKVX98I69SRHtM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 08:35:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9sv7j1uhgl"
-        },
-        {
-          "Name": "label",
-          "Value": "css/Account.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-qVPRMOoIIxQHPIa564d69oJvY9wuAhKVX98I69SRHtM="
-        }
-      ]
-    },
-    {
       "Route": "css/Account.css",
       "AssetFile": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\wwwroot\\css\\Account.css",
       "Selectors": [],
@@ -1397,7 +1352,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "137"
+          "Value": "431"
         },
         {
           "Name": "Content-Type",
@@ -1405,11 +1360,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qVPRMOoIIxQHPIa564d69oJvY9wuAhKVX98I69SRHtM=\""
+          "Value": "\"Ucu0Rick7c7FOtd+9gN9zboG9F5IeeT+xBEBqdxQNYM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 08:35:25 GMT"
+          "Value": "Fri, 04 Apr 2025 09:03:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1419,7 +1374,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qVPRMOoIIxQHPIa564d69oJvY9wuAhKVX98I69SRHtM="
+          "Value": "sha256-Ucu0Rick7c7FOtd+9gN9zboG9F5IeeT+xBEBqdxQNYM="
+        }
+      ]
+    },
+    {
+      "Route": "css/Account.fsffnw8btr.css",
+      "AssetFile": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\wwwroot\\css\\Account.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "431"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Ucu0Rick7c7FOtd+9gN9zboG9F5IeeT+xBEBqdxQNYM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 04 Apr 2025 09:03:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fsffnw8btr"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Account.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Ucu0Rick7c7FOtd+9gN9zboG9F5IeeT+xBEBqdxQNYM="
         }
       ]
     },
@@ -6354,7 +6354,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1346"
+          "Value": "2039"
         },
         {
           "Name": "Content-Type",
@@ -6362,11 +6362,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RNPl647EGraL3z5N72MofdbxdRmmImtQs039anslsBw=\""
+          "Value": "\"qsdbg5ZVuPINEWMZldYE2rVYbrRjet6E7q9xBpnkWZ0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 09:53:21 GMT"
+          "Value": "Fri, 04 Apr 2025 10:19:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6376,12 +6376,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RNPl647EGraL3z5N72MofdbxdRmmImtQs039anslsBw="
+          "Value": "sha256-qsdbg5ZVuPINEWMZldYE2rVYbrRjet6E7q9xBpnkWZ0="
         }
       ]
     },
     {
-      "Route": "Proyecto.skx3st3spk.bundle.scp.css",
+      "Route": "Proyecto.ezn14dka6q.bundle.scp.css",
       "AssetFile": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Proyecto.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6391,7 +6391,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1346"
+          "Value": "2039"
         },
         {
           "Name": "Content-Type",
@@ -6399,11 +6399,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RNPl647EGraL3z5N72MofdbxdRmmImtQs039anslsBw=\""
+          "Value": "\"qsdbg5ZVuPINEWMZldYE2rVYbrRjet6E7q9xBpnkWZ0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 09:53:21 GMT"
+          "Value": "Fri, 04 Apr 2025 10:19:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6413,7 +6413,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "skx3st3spk"
+          "Value": "ezn14dka6q"
         },
         {
           "Name": "label",
@@ -6421,12 +6421,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-RNPl647EGraL3z5N72MofdbxdRmmImtQs039anslsBw="
+          "Value": "sha256-qsdbg5ZVuPINEWMZldYE2rVYbrRjet6E7q9xBpnkWZ0="
         }
       ]
     },
     {
-      "Route": "Proyecto.skx3st3spk.styles.css",
+      "Route": "Proyecto.ezn14dka6q.styles.css",
       "AssetFile": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Proyecto.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6436,7 +6436,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1346"
+          "Value": "2039"
         },
         {
           "Name": "Content-Type",
@@ -6444,11 +6444,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RNPl647EGraL3z5N72MofdbxdRmmImtQs039anslsBw=\""
+          "Value": "\"qsdbg5ZVuPINEWMZldYE2rVYbrRjet6E7q9xBpnkWZ0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 09:53:21 GMT"
+          "Value": "Fri, 04 Apr 2025 10:19:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6458,7 +6458,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "skx3st3spk"
+          "Value": "ezn14dka6q"
         },
         {
           "Name": "label",
@@ -6466,7 +6466,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-RNPl647EGraL3z5N72MofdbxdRmmImtQs039anslsBw="
+          "Value": "sha256-qsdbg5ZVuPINEWMZldYE2rVYbrRjet6E7q9xBpnkWZ0="
         }
       ]
     },
@@ -6481,7 +6481,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1346"
+          "Value": "2039"
         },
         {
           "Name": "Content-Type",
@@ -6489,11 +6489,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RNPl647EGraL3z5N72MofdbxdRmmImtQs039anslsBw=\""
+          "Value": "\"qsdbg5ZVuPINEWMZldYE2rVYbrRjet6E7q9xBpnkWZ0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 09:53:21 GMT"
+          "Value": "Fri, 04 Apr 2025 10:19:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6503,7 +6503,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RNPl647EGraL3z5N72MofdbxdRmmImtQs039anslsBw="
+          "Value": "sha256-qsdbg5ZVuPINEWMZldYE2rVYbrRjet6E7q9xBpnkWZ0="
         }
       ]
     }

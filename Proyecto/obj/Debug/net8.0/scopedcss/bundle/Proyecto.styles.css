@@ -1,12 +1,44 @@
-/* _content/Proyecto/Views/Home/Index.cshtml.rz.scp.css */
-.container div[b-jcjbf7459v] {
-    flex: 1;
+/* _content/Proyecto/Views/Account/Stats/Index.cshtml.rz.scp.css */
+.stats-content[b-4h2w8ev0za] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50%;
+    border-radius: 20px;
+    border: 1px groove black;
+    
 }
-.text-center h2[b-jcjbf7459v] {
+.stats-content hr[b-4h2w8ev0za] {
+    margin: 2px 0px 20px 0px
+}
+.stat[b-4h2w8ev0za] {
+    margin: 15px 15px 15px 15px;
+    padding:10px;
+    height: 100px;
+    border-radius: 20px;
+    border: 1px groove black;
+    height: fit-content;
+}
+.stat *[b-4h2w8ev0za] {
+    margin-left: 5px
+}
+.stat-display[b-4h2w8ev0za] {
+    justify-self:center;
+}
+/* _content/Proyecto/Views/Home/Index.cshtml.rz.scp.css */
+.account-option[b-jcjbf7459v] {
+    height: 400px; 
+    display: flex;
+    flex-direction: column
+}
+.account-option h2[b-jcjbf7459v] {
     text-align: left;
 }
-.text-center a[b-jcjbf7459v] {
-    width: 33%;
+.account-option a[b-jcjbf7459v] {
+    flex: 1;
+    width: 40%;
+    align-self: center;
+    align-content: center;
+    margin: 75px 75px 75px 75px;
 }
 /* _content/Proyecto/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification

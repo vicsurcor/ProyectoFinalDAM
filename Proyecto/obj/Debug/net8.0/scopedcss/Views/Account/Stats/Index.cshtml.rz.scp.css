@@ -1,0 +1,25 @@
+.stats-content[b-4h2w8ev0za] {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50%;
+    border-radius: 20px;
+    border: 1px groove black;
+    
+}
+.stats-content hr[b-4h2w8ev0za] {
+    margin: 2px 0px 20px 0px
+}
+.stat[b-4h2w8ev0za] {
+    margin: 15px 15px 15px 15px;
+    padding:10px;
+    height: 100px;
+    border-radius: 20px;
+    border: 1px groove black;
+    height: fit-content;
+}
+.stat *[b-4h2w8ev0za] {
+    margin-left: 5px
+}
+.stat-display[b-4h2w8ev0za] {
+    justify-self:center;
+}

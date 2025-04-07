@@ -1,9 +1,15 @@
-.container div[b-jcjbf7459v] {
-    flex: 1;
+.account-option[b-jcjbf7459v] {
+    height: 400px; 
+    display: flex;
+    flex-direction: column
 }
-.text-center h2[b-jcjbf7459v] {
+.account-option h2[b-jcjbf7459v] {
     text-align: left;
 }
-.text-center a[b-jcjbf7459v] {
-    width: 33%;
+.account-option a[b-jcjbf7459v] {
+    flex: 1;
+    width: 40%;
+    align-self: center;
+    align-content: center;
+    margin: 75px 75px 75px 75px;
 }
