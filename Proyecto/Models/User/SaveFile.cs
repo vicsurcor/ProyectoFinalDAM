@@ -10,7 +10,9 @@ namespace Proyecto.Models.User
         public DateTime SaveTime { get; set; } = DateTime.Now;
 
         public SaveFile() { }
-        public SaveFile(string json)
+
+        #region Json
+        public SaveFile DeserializeSaveFile(string json)
         {
             if (json != null)
             {
@@ -19,12 +21,28 @@ namespace Proyecto.Models.User
                 Name = obj.Name;
                 Content = obj.Content;
                 SaveTime = obj.SaveTime;
+                return obj;
             }
             else
             {
                 throw new NullReferenceException();
             }
         }
+        public string SerializeSaveFile(SaveFile save)
+        {
+            if (save != null)
+            {
+                return JsonConvert.SerializeObject(save);
+                
+            }
+            else
+            {
+                throw new NullReferenceException();
+            }
+        }
+        #endregion
+
+        #region Aux
         public string GetName()
         {
             return Name;
@@ -37,5 +55,7 @@ namespace Proyecto.Models.User
         {
             return SaveTime;
         }
+        #endregion
+
     }
 }

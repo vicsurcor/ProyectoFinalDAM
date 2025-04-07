@@ -8,7 +8,8 @@ namespace Proyecto.Models.User
     public class UserContent
     {
         public int Id { get; set; } = 1;
-        [Newtonsoft.Json.JsonIgnore]
+        public User User { get; set; } = new User();
+        //[Newtonsoft.Json.JsonIgnore]
         public Dictionary<int, SaveFile> Saves { get; set; } = new Dictionary<int, SaveFile>
         {
             {1, new SaveFile() }
@@ -22,7 +23,13 @@ namespace Proyecto.Models.User
         public DateTime LastPlayed { get; set; } = DateTime.Now.AddHours(2);
 
         public UserContent() { }
-        public UserContent(string json)
+        public UserContent(User user)
+        {
+            this.User = user;
+        }
+
+        #region Json
+        public UserContent DeserializeUserContent(string json)
         {
             if (json != null)
             {
@@ -35,12 +42,27 @@ namespace Proyecto.Models.User
                 Deaths = obj.Deaths;
                 FirstPlayed = obj.FirstPlayed;
                 LastPlayed = obj.LastPlayed;
+                return obj;
             }
             else
             {
                 throw new NullReferenceException();
             }
         }
+        public string SerializeUserContent(UserContent user)
+        {
+            if (user != null)
+            {
+                return JsonConvert.SerializeObject(user);
+            }
+            else
+            {
+                throw new NullReferenceException();
+            }
+        }
+        #endregion
+
+        #region Aux
         public static string DeconstructTime(double timeInHours)
         {
             int hours = (int)timeInHours;
@@ -51,5 +73,32 @@ namespace Proyecto.Models.User
 
             return $"{hours} Hours, {minutes} minutes, {seconds} seconds";
         }
+
+        public bool AddSave(SaveFile save)
+        {
+            if (save != null)
+            {
+                if (Saves.TryGetValue(save.Id, out SaveFile _save) && save.SaveTime > _save.SaveTime)
+                {
+                    Saves[save.Id] = save;
+                    return true;
+                }
+                else if (!Saves.ContainsKey(save.Id))
+                {
+                    Saves.Add(save.Id, save);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                throw new NullReferenceException();
+            }
+
+        }
+        #endregion
     }
 }

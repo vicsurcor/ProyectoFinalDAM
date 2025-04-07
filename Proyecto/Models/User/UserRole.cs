@@ -5,12 +5,14 @@ namespace Proyecto.Models.User
     public class UserRole
     {
         [Required]
-        public required string Name { get; set; }
+        public string Name { get; set; }
+
+        public UserRole (string name) { Name = name; }
 
         public static IEnumerable<UserRole> GetUserRoles()
         {
-            yield return new UserRole { Name = "Admin" };
-            yield return new UserRole { Name = "Client" };
+            yield return new UserRole("Admin");
+            yield return new UserRole("Client");
         }
 
         public static UserRole GetUserRole(string name)

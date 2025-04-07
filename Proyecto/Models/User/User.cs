@@ -7,5 +7,14 @@
         public string UserEmail { get; set; } = "TestUserEmail@test.com";
         public string Password { get; set; } = "TestPassword";
         public UserRole UserRole { get; set; } = UserRole.GetUserRole("Client");
+
+        public User() { }
+
+        public User(string username, string password)
+        {
+            UserName = username;
+            Password = password;
+        }
     }
+    
 }
