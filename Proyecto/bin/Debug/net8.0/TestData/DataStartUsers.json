@@ -1,29 +1,56 @@
 [
-    {
+  {
+    "Id": 1,
+    "User": {
+      "Id": 1,
+      "UserName": "vicsurcor",
+      "UserEmail": "vdsurcor@gmail.com",
+      "Password": "123Admin",
+      "UserRole": {
+        "Name": "Admin"
+      }
+    },
+    "Saves": {
+      "1": {
         "Id": 1,
-        "User": {
-            "Id": 1,
-            "UserName": "vicsurcor",
-            "UserEmail": "vdsurcor@gmail.com",
-            "Password": "123Admin",
-            "UserRole": {
-                "Name": "Admin"
-            }
-        },
-        "Saves": {
-            "1": {
-                "Id": 1,
-                "Name": "TestSave1.json",
-                "Content": "{\"Id\":1,\"User\":{\"Id\":1,\"UserName\":\"vicsurcor\",\"UserEmail\":\"vdsurcor@gmail.com\",\"Password\":\"123Admin\",\"UserRole\":{\"Name\":\"Admin\"}},\"TimePlayed\":11.00,\"EnemiesDefeated\":69,\"LevelsCleared\":69,\"CharacterLevel\":69,\"Deaths\":0,\"FirstPlayed\":\"2025-04-07T00:00:00\",\"LastPlayed\":\"2025-04-07T09:43:00\"}",
-                "SaveTime": "2025-04-07T09:43:00"
-            }
-        },
-        "TimePlayed": 11.00,
-        "EnemiesDefeated": 69,
-        "LevelsCleared": 69,
-        "CharacterLevel": 69,
-        "Deaths": 0,
-        "FirstPlayed": "2025-04-07T00:00:00",
-        "LastPlayed": "2025-04-07T09:43:00"
-    }
+        "Name": "TestSave1.json",
+        "Content": "{\"Id\":1,\"User\":{\"Id\":1,\"UserName\":\"vicsurcor\",\"UserEmail\":\"vdsurcor@gmail.com\",\"Password\":\"123Admin\",\"UserRole\":{\"Name\":\"Admin\"}},\"TimePlayed\":11.00,\"EnemiesDefeated\":69,\"LevelsCleared\":69,\"CharacterLevel\":69,\"Deaths\":0,\"FirstPlayed\":\"2025-04-07T00:00:00\",\"LastPlayed\":\"2025-04-07T09:43:00\"}",
+        "SaveTime": "2025-04-07T09:43:00"
+      }
+    },
+    "TimePlayed": 11.0,
+    "EnemiesDefeated": 69,
+    "LevelsCleared": 69,
+    "CharacterLevel": 69,
+    "Deaths": 0,
+    "FirstPlayed": "2025-04-07T00:00:00",
+    "LastPlayed": "2025-04-07T09:43:00"
+  },
+  {
+    "Id": 1,
+    "User": {
+      "Id": 1,
+      "UserName": "vicsurcor2",
+      "UserEmail": "vdsurcor@gmail.com",
+      "Password": "123C",
+      "UserRole": {
+        "Name": "Client"
+      }
+    },
+    "Saves": {
+      "1": {
+        "Id": 1,
+        "Name": "TestSave.Json",
+        "Content": "",
+        "SaveTime": "2025-04-07T14:37:49.6906874+02:00"
+      }
+    },
+    "TimePlayed": 10.5,
+    "EnemiesDefeated": 0,
+    "LevelsCleared": 0,
+    "CharacterLevel": 0,
+    "Deaths": 0,
+    "FirstPlayed": "2025-04-07T14:37:49.6906992+02:00",
+    "LastPlayed": "2025-04-07T16:37:49.6906994+02:00"
+  }
 ]
