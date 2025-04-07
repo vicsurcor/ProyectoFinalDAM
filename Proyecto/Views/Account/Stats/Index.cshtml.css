@@ -1,0 +1,26 @@
+﻿.stats-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50%;
+    border-radius: 20px;
+    border: 1px groove black;
+    grid-template-areas:
+        "1 2 3"
+}
+.stats-content hr {
+    margin: 2px 0px 20px 0px
+}
+.stat {
+    margin: 15px 15px 15px 15px;
+    padding:10px;
+    height: 100px;
+    border-radius: 20px;
+    border: 1px groove black;
+    height: fit-content;
+}
+.stat * {
+    margin-left: 5px
+}
+.stat-display {
+    justify-self:center;
+}

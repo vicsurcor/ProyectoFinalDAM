@@ -13,36 +13,57 @@
         <partial name="@(ViewBag.SecondaryLayout)"></partial>
     }
 }
-
+<link rel="stylesheet" href="~/Views/Account/Stats/Index.cshtml.css" asp-append-version="true" />
 <h2>@(Model.User.UserName)</h2>
 
 <div class="stats-content">
     <div class="stat">
         @Html.LabelFor(m => timePlayed, "Time played: ", new {@class = "stat-label"})
-        @Html.DisplayFor(m => timePlayed)
+        <hr />
+        <div class="stat-display">
+            @Html.DisplayFor(m => timePlayed)
+        </div>
     </div>
     <div class="stat">
         @Html.LabelFor(m => m.UserContent.CharacterLevel, "Character level: ", new { @class = "stat-label" })
-        @Html.DisplayFor(m => m.UserContent.CharacterLevel)
+        <hr />
+        <div class="stat-display">
+            @Html.DisplayFor(m => m.UserContent.CharacterLevel)
+        </div>
     </div>
     <div class="stat">
         @Html.LabelFor(m => m.UserContent.EnemiesDefeated, "Enemies defeated: ", new { @class = "stat-label" })
-        @Html.DisplayFor(m => m.UserContent.EnemiesDefeated)
+        <hr />
+        <div class="stat-display">
+            @Html.DisplayFor(m => m.UserContent.EnemiesDefeated)
+        </div>
     </div>
     <div class="stat">
         @Html.LabelFor(m => m.UserContent.LevelsCleared, "Levels cleared: ", new { @class = "stat-label" })
-        @Html.DisplayFor(m => m.UserContent.LevelsCleared)
+        <hr />
+        <div class="stat-display">
+            @Html.DisplayFor(m => m.UserContent.LevelsCleared)
+        </div>
     </div>
     <div class="stat">
         @Html.LabelFor(m => m.UserContent.Deaths, "Player deaths: ", new { @class = "stat-label" })
-        @Html.DisplayFor(m => m.UserContent.Deaths)
+        <hr />
+        <div class="stat-display">
+            @Html.DisplayFor(m => m.UserContent.Deaths)
+        </div>
     </div>
     <div class="stat">
         @Html.LabelFor(m => m.UserContent.FirstPlayed, "First played: ", new { @class = "stat-label" })
-        @Html.DisplayFor(m => m.UserContent.FirstPlayed)
+        <hr />
+        <div class="stat-display">
+            @Html.DisplayFor(m => m.UserContent.FirstPlayed)
+        </div>
     </div>
     <div class="stat">
         @Html.LabelFor(m => m.UserContent.LastPlayed, "Last Played: ", new { @class = "stat-label" })
-        @Html.DisplayFor(m => m.UserContent.LastPlayed)
+        <hr />
+        <div class="stat-display">
+            @Html.DisplayFor(m => m.UserContent.LastPlayed)
+       </div>
     </div>
 </div>

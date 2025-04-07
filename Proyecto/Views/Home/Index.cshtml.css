@@ -1,9 +1,15 @@
-﻿.container div {
-    flex: 1;
+﻿.account-option {
+    height: 400px; 
+    display: flex;
+    flex-direction: column
 }
-.text-center h2 {
+.account-option h2 {
     text-align: left;
 }
-.text-center a {
-    width: 33%;
+.account-option a {
+    flex: 1;
+    width: 40%;
+    align-self: center;
+    align-content: center;
+    margin: 75px 75px 75px 75px;
 }

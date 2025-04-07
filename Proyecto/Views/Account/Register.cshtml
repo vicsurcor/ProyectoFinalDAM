@@ -18,14 +18,17 @@
 <form method="post" action="/Account/Register">
     <div class="form-group">
         @Html.LabelFor(m => m.User.UserName, "Username: ")
+        <hr />
         @Html.TextBoxFor(m => m.User.UserName, new { @class = "form-control", placeholder = "Insert your username here. " })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.User.UserEmail, "Email: ")
+        <hr />
         @Html.TextBoxFor(m => m.User.UserEmail, new { @class = "form-control", placeholder = "Insert your email here. " })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.User.Password, "Password: ")
+        <hr />
         @Html.PasswordFor(m => m.User.Password, new { @class = "form-control", placeholder = "Insert your password here. " })
     </div>
     <br />

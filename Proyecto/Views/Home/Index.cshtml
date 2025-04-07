@@ -4,10 +4,15 @@
 <link rel="stylesheet" href="~/Views/Home/Index.cshtml.css" asp-append-version="true" />
 
 <div class="text-center">
-    <h2>Login</h2>
-    <hr />
-    @Html.ActionLink("Log into Account", "Login", "Account", null, new { @class = "btn btn-primary btn-lg" })
-    <h2>Register</h2>
-    <hr />
-    @Html.ActionLink("Register into Account", "Register", "Account", null, new { @class = "btn btn-secondary btn-lg" })
+    <div class="account-option">
+        <h2>Login</h2>
+        <hr />
+        @Html.ActionLink("Log into Account", "Login", "Account", null, new { @class = "btn btn-primary btn-lg" })
+    </div>
+    <div class="account-option">
+        <h2>Register</h2>
+        <hr />
+        @Html.ActionLink("Register into Account", "Register", "Account", null, new { @class = "btn btn-secondary btn-lg" })
+    </div>
+    
 </div>

@@ -1,9 +1,29 @@
-﻿.container {
-    width: 33%;
+﻿html, body {
+    height: 100%;
 }
-.container form div {
+.container {
+    width: 55%;
+    height: 100%;
+}
+main {
+    height: 45%;
+    display:flex;
+    flex-direction:column;
+}
+form {
+    height: 100%;
+}
+.form-group hr {
+    margin: 2px 0px 20px 0px;
+}
+form div {
     margin: 10px 0px 10px 0px;
+    height: 33%;
+    width: 66%;
+    justify-self:center;
 }
-.container form a {
+.btn {
+    height: 20%;
     width: 100%;
+    align-content:center
 }
