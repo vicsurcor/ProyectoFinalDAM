@@ -9,8 +9,10 @@ namespace Proyecto.Extra
         {
             
             List<UserContent> users = JsonMethods.GetJsonUserContents();
-            return users.Count;
+            Console.WriteLine(users.Count);
+            return users.Count + 1;
         }
+
     }
         
 }

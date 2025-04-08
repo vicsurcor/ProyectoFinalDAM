@@ -2,13 +2,14 @@
 
 using System.Text.Json.Serialization;
 using Newtonsoft.Json;
+using Proyecto.Extra;
 
 namespace Proyecto.Models.User
 {
     public class UserContent
     {
-        public int _LastId = 0;
-        public string filePath = "TestData/DataStartUsers.json";
+        [Newtonsoft.Json.JsonIgnore]
+        public static int _LastId = 1;
         public int Id { get; set; }
         public User User { get; set; } = new User();
         //[Newtonsoft.Json.JsonIgnore]
@@ -23,11 +24,18 @@ namespace Proyecto.Models.User
         public int Deaths { get; set; } = 0;
         public DateTime FirstPlayed { get; set; } = DateTime.Now;
         public DateTime LastPlayed { get; set; } = DateTime.Now.AddHours(2);
-
-        public UserContent() { }
+        static UserContent() 
+        {
+            _LastId = InitializeId.InitializeIds();
+        }
+        public UserContent() 
+        {
+            Id = _LastId;
+        }
         public UserContent(User user)
         {
             this.User = user;
+            Id = _LastId;
         }
 
         #region Json
@@ -100,33 +108,6 @@ namespace Proyecto.Models.User
                 throw new NullReferenceException();
             }
 
-        }
-        public int GetLastId()
-        {
-            string json = "";
-            int lastId = _LastId;
-            try
-            {
-                using StreamReader reader = new StreamReader(filePath);
-                json = reader.ReadToEnd();
-                Console.WriteLine("File read successfully.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-            }
-
-            // Deserialize the JSON to a list of users
-            List<UserContent> users = JsonConvert.DeserializeObject<List<UserContent>>(json);
-
-            foreach (var _user in users)
-            {
-                if (_user.Id > _LastId)
-                {
-                    lastId = _user.Id;
-                }
-            }
-            return lastId++;
         }
         #endregion
     }

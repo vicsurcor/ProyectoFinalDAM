@@ -1,17 +1,24 @@
 ﻿using Newtonsoft.Json;
+using Proyecto.Extra;
 
 namespace Proyecto.Models.User
 {
     public class SaveFile
     {
-        public int _LastId = 0;
-        public string filePath = "TestData/DataStartUsers.json";
+        [Newtonsoft.Json.JsonIgnore]
+        public static int _LastId = 1;
         public int Id { get; set; }
         public string Name { get; set; } = "TestSave.Json";
         public string Content { get; set; } = "";
         public DateTime SaveTime { get; set; } = DateTime.Now;
-
-        public SaveFile() { }
+        static SaveFile()
+        {
+            _LastId = InitializeId.InitializeIds();
+        }
+        public SaveFile() 
+        {
+            Id = _LastId;
+        }
 
         #region Json
         public SaveFile DeserializeSaveFile(string json)
@@ -56,33 +63,6 @@ namespace Proyecto.Models.User
         public DateTime GetSaveDate()
         {
             return SaveTime;
-        }
-        public int GetLastId()
-        {
-            string json = "";
-            int lastId = _LastId;
-            try
-            {
-                using StreamReader reader = new StreamReader(filePath);
-                json = reader.ReadToEnd();
-                Console.WriteLine("File read successfully.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-            }
-
-            // Deserialize the JSON to a list of users
-            List<UserContent> users = JsonConvert.DeserializeObject<List<UserContent>>(json);
-
-            foreach (var _user in users)
-            {
-                if (_user.Saves.Count > _LastId)
-                {
-                    lastId = _user.Saves.Count;
-                }
-            }
-            return lastId++;
         }
         #endregion
 
