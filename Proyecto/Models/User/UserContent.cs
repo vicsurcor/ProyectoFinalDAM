@@ -26,7 +26,7 @@ namespace Proyecto.Models.User
         public DateTime LastPlayed { get; set; } = DateTime.Now.AddHours(2);
         static UserContent() 
         {
-            _LastId = InitializeId.InitializeIds();
+            _LastId = InitializeId.InitializeUserContentIds();
         }
         public UserContent() 
         {

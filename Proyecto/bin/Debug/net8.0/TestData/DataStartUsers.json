@@ -25,32 +25,5 @@
     "Deaths": 0,
     "FirstPlayed": "2025-04-07T00:00:00",
     "LastPlayed": "2025-04-07T09:43:00"
-  },
-  {
-    "Id": 2,
-    "User": {
-      "Id": 2,
-      "UserName": "vicsurcor2",
-      "UserEmail": "vdsurcor@gmail.com",
-      "Password": "123C",
-      "UserRole": {
-        "Name": "Client"
-      }
-    },
-    "Saves": {
-      "1": {
-        "Id": 2,
-        "Name": "TestSave.Json",
-        "Content": "",
-        "SaveTime": "2025-04-08T15:13:24.7845967+02:00"
-      }
-    },
-    "TimePlayed": 10.5,
-    "EnemiesDefeated": 0,
-    "LevelsCleared": 0,
-    "CharacterLevel": 0,
-    "Deaths": 0,
-    "FirstPlayed": "2025-04-08T15:13:24.7845989+02:00",
-    "LastPlayed": "2025-04-08T17:13:24.784599+02:00"
   }
 ]

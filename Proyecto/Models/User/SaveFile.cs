@@ -13,7 +13,7 @@ namespace Proyecto.Models.User
         public DateTime SaveTime { get; set; } = DateTime.Now;
         static SaveFile()
         {
-            _LastId = InitializeId.InitializeIds();
+            _LastId = InitializeId.InitializeSaveFileIds();
         }
         public SaveFile() 
         {

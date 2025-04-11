@@ -15,7 +15,7 @@ namespace Proyecto.Models.User
 
         static User()
         {
-            _LastId = InitializeId.InitializeIds();
+            _LastId = InitializeId.InitializeUserIds();
         }
         public User()
         {
