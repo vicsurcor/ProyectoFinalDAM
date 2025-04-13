@@ -55,23 +55,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\v.suros\\.nuget\\packages\\": {},
+    "C:\\Users\\vdsur\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\Proyecto.csproj",
+      "projectUniqueName": "C:\\Users\\vdsur\\Desktop\\Projects\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\Proyecto.csproj",
       "projectName": "Proyecto",
-      "projectPath": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\Proyecto.csproj",
-      "packagesPath": "C:\\Users\\v.suros\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\obj\\",
+      "projectPath": "C:\\Users\\vdsur\\Desktop\\Projects\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\Proyecto.csproj",
+      "packagesPath": "C:\\Users\\vdsur\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vdsur\\Desktop\\Projects\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\v.suros\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vdsur\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -80,7 +80,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

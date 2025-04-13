@@ -24,6 +24,7 @@ namespace Proyecto.Models.User
         public int Deaths { get; set; } = 0;
         public DateTime FirstPlayed { get; set; } = DateTime.Now;
         public DateTime LastPlayed { get; set; } = DateTime.Now.AddHours(2);
+
         static UserContent() 
         {
             _LastId = InitializeId.InitializeUserContentIds();

@@ -6,7 +6,8 @@ namespace Proyecto.Extra
     public class JsonMethods
     {
         // Path to the JSON file
-        static string filePath = "TestData/DataStartUsers.json";
+        public static readonly string filePath = "TestData/DataStartUsers.json";
+        public static readonly string savePath = "TestData/DataStartSaves.json";
         public static List<UserContent> GetJsonUserContents()
         {
             // Read the JSON file
@@ -35,6 +36,12 @@ namespace Proyecto.Extra
                 writer.Write(json);
                 Console.WriteLine("File overwritten successfully.");
             }
+        }
+        public static List<SaveFile> GetSaveFilesFromJson()
+        {
+            var jsonFilePath = savePath;
+            var jsonData = System.IO.File.ReadAllText(jsonFilePath);
+            return JsonConvert.DeserializeObject<List<SaveFile>>(jsonData);
         }
     }
 }

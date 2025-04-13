@@ -2,21 +2,21 @@
   {
     "Id": 1,
     "User": {
-      "Id": 1,
-      "UserName": "vicsurcor",
-      "UserEmail": "vdsurcor@gmail.com",
-      "Password": "123Admin",
-      "UserRole": {
-        "Name": "Admin"
-      }
+        "Id": 1,
+        "UserName": "vicsurcor",
+        "UserEmail": "05eb1610c2e7cc3b4d67726e102a63d1e3cc162009565703f75990cdd3341da2639b211b387379f46e2e89ca358f955c73b7ed4de5435146ac5808647dbad5da",
+        "Password": "51dfe515a6ed9fff1e90c047925dd8c1fb1e1637c809633e554feb5a76d4e6a75db75562d51553fe264b545d65451f1f404b0930ee579ff13d08e89d6f57498e",
+        "UserRole": {
+            "Name": "Admin"
+        }
     },
     "Saves": {
-      "1": {
-        "Id": 1,
-        "Name": "TestSave1.json",
-        "Content": "{\"Id\":1,\"User\":{\"Id\":1,\"UserName\":\"vicsurcor\",\"UserEmail\":\"vdsurcor@gmail.com\",\"Password\":\"123Admin\",\"UserRole\":{\"Name\":\"Admin\"}},\"TimePlayed\":11.00,\"EnemiesDefeated\":69,\"LevelsCleared\":69,\"CharacterLevel\":69,\"Deaths\":0,\"FirstPlayed\":\"2025-04-07T00:00:00\",\"LastPlayed\":\"2025-04-07T09:43:00\"}",
-        "SaveTime": "2025-04-07T09:43:00"
-      }
+        "1": {
+            "Id": 1,
+            "Name": "TestSave1.json",
+            "Content": "{\"Id\":1,\"User\":{\"Id\":1,\"UserName\":\"vicsurcor\",\"UserEmail\":\"05eb1610c2e7cc3b4d67726e102a63d1e3cc162009565703f75990cdd3341da2639b211b387379f46e2e89ca358f955c73b7ed4de5435146ac5808647dbad5da\",\"Password\":\"51dfe515a6ed9fff1e90c047925dd8c1fb1e1637c809633e554feb5a76d4e6a75db75562d51553fe264b545d65451f1f404b0930ee579ff13d08e89d6f57498e\",\"UserRole\":{\"Name\":\"Admin\"}},\"TimePlayed\":11.00,\"EnemiesDefeated\":69,\"LevelsCleared\":69,\"CharacterLevel\":69,\"Deaths\":0,\"FirstPlayed\":\"2025-04-07T00:00:00\",\"LastPlayed\":\"2025-04-07T09:43:00\"}",
+            "SaveTime": "2025-04-07T09:43:00"
+        }
     },
     "TimePlayed": 11.0,
     "EnemiesDefeated": 69,

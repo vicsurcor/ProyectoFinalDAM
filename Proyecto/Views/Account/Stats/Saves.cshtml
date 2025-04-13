@@ -19,7 +19,10 @@
         <div class="save">
             @Html.LabelFor(m => save, "Save: ",new {@class = "save-label"})   
             <br />
-            @Html.ActionLink(save.Value.Name, "")
+            @* <a asp-action="DownloadSaveFile" asp-route-saveId="@save.Value.Id">Download @save.Value.Name</a> *@
+
+            <a href="/download/@save.Value.Id">Download @save.Value.Name</a>
+
         </div>
     }
 </div>

@@ -4,9 +4,6 @@ using Microsoft.Extensions.FileProviders;
 var builder = WebApplication.CreateBuilder(args);
 
 //TODO: Authentication Error Pages
-//TODO: Authentication Tokens
-//TODO: User Encription / Hashing
-//TODO: Connection
 //TODO: *ViewChanges
 
 

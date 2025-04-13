@@ -32,7 +32,7 @@ namespace Proyecto.Controllers
             // Check if the input user matches any user in the list
             foreach (var _user in users)
             {
-                if (_user.User.UserName == user.UserName && _user.User.Password == user.Password)
+                if (_user.User.UserName == user.UserName && EncryptionMethods.VerifyHash(user.Password, _user.User.Password))
                 {
                     UserViewModel view = new UserViewModel(_user.User, _user);
                     HttpContext.Session.SetObject("UserModel", view);
@@ -57,7 +57,11 @@ namespace Proyecto.Controllers
                 }
                 else
                 {
-                    users.Add(new UserContent(user));
+                    users.Add(new UserContent(new User(
+                        user.UserName,
+                        user.UserEmail,
+                        user.Password
+                        )));
                     JsonMethods.UpdateJsonUserContents(users);
                     return RedirectToAction("Login", "Account");
                 }

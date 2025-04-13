@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "v+4I6Jx8clU=",
+  "dgSpecHash": "69hycwbH5Tc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\v.suros\\source\\repos\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\Proyecto.csproj",
+  "projectFilePath": "C:\\Users\\vdsur\\Desktop\\Projects\\vicsurcor\\ProyectoFinalDAM\\Proyecto\\Proyecto.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\v.suros\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\vdsur\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
