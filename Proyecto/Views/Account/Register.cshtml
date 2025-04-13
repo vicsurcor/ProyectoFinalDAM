@@ -4,32 +4,38 @@
     ViewData["Title"] = "Register";
 }
 
-@model UserViewModel;
+@model User;
 <head>
     <styles>
         <link href="~/css/Account.css" rel="stylesheet" />
     </styles>
 </head>
 
+@Html.ValidationSummary("", new { @class = "shared-color validation-summary-errors" })
 
 <h2>Register</h2>
 <hr />
 
 <form method="post" action="/Account/Register">
     <div class="form-group">
-        @Html.LabelFor(m => m.User.UserName, "Username: ")
+        @Html.LabelFor(m => m.UserName, "Username: ") @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
         <hr />
-        @Html.TextBoxFor(m => m.User.UserName, new { @class = "form-control", placeholder = "Insert your username here. " })
+        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Insert your username here. " })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.User.UserEmail, "Email: ")
+        @Html.LabelFor(m => m.UserEmail, "Email: ") @Html.ValidationMessageFor(m => m.UserEmail, "", new { @class = "text-danger" })
         <hr />
-        @Html.TextBoxFor(m => m.User.UserEmail, new { @class = "form-control", placeholder = "Insert your email here. " })
+        @Html.TextBoxFor(m => m.UserEmail, new { @class = "form-control", placeholder = "Insert your email here. " })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.User.Password, "Password: ")
+        @Html.LabelFor(m => m.Password, "Password: ") @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
         <hr />
-        @Html.PasswordFor(m => m.User.Password, new { @class = "form-control", placeholder = "Insert your password here. " })
+        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Insert your password here. " })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.RePassword, "Reinsert Password: ") @Html.ValidationMessageFor(m => m.RePassword, "", new { @class = "text-danger" })
+        <hr />
+        @Html.PasswordFor(m => m.RePassword, new { @class = "form-control", placeholder = "Reinsert your password here. " })
     </div>
     <br />
     <input type="submit" value="Register" class="btn btn-primary" />

@@ -55,12 +55,17 @@ namespace Proyecto.Controllers
                 {
                     return View();
                 }
+                else if (!ModelState.IsValid)
+                {
+                    return View(user);
+                }
                 else
                 {
                     users.Add(new UserContent(new User(
                         user.UserName,
                         user.UserEmail,
-                        user.Password
+                        user.Password,
+                        user.RePassword
                         )));
                     JsonMethods.UpdateJsonUserContents(users);
                     return RedirectToAction("Login", "Account");
