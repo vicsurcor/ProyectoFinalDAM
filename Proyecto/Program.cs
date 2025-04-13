@@ -3,7 +3,6 @@ using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//TODO: Authentication Error Pages
 //TODO: *ViewChanges
 
 
