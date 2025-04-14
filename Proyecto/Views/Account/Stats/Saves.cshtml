@@ -17,7 +17,7 @@
     @foreach (var save in Model.Saves)
     {
         <div class="save">
-            @Html.LabelFor(m => save, "Save: ",new {@class = "save-label"})   
+            @Html.LabelFor(m => save, "Save: " + save.Value.Name, new {@class = "save-label"})   
             <br />
             @* <a asp-action="DownloadSaveFile" asp-route-saveId="@save.Value.Id">Download @save.Value.Name</a> *@
 

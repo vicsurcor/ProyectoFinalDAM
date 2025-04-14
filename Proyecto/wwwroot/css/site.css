@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+  
 }
 
 @media (min-width: 768px) {
@@ -18,10 +19,35 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  
+    background: linear-gradient(45deg, #392B2C, #392B2C, #392B2C, #6A0293);
+    /*background-size: 200% 200%;
+    background-position: top left;*/
+    margin-bottom: 0px;
 }
 .active {
-    background-color: gray;
-    border: 1px groove black; 
+    background: linear-gradient(45deg, #6A0293, #392B2C, #6A0293, #392B2C, #6A0293);
+    border: 1px groove black;
     border-radius: 0px 0px 5px 5px;
+}
+hr, h2, label{
+    color: white;
+}
+header nav {
+    background: linear-gradient(135deg, #392B2C, #392B2C, #6A0293);
+}
+.navbar-light .navbar-brand {
+    color: white;
+}
+.text-dark{
+    color: white !important;
+}
+.bg-white {
+    background-color: transparent !important;
+}
+.save {
+    background: linear-gradient(45deg, #6E0023, transparent, transparent);
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 15px;
 }

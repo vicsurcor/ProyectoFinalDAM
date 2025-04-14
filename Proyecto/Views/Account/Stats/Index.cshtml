@@ -18,52 +18,80 @@
 
 <div class="stats-content">
     <div class="stat">
-        @Html.LabelFor(m => timePlayed, "Time played: ", new {@class = "stat-label"})
+        <div class="label-div">
+            @Html.LabelFor(m => timePlayed, "Time played: ", new {@class = "stat-label"})
+        </div>
         <hr />
-        <div class="stat-display">
-            @Html.DisplayFor(m => timePlayed)
+        <div class=display-div>
+            <div class="stat-display">
+                @Html.DisplayFor(m => timePlayed)
+            </div>
         </div>
     </div>
     <div class="stat">
-        @Html.LabelFor(m => m.UserContent.CharacterLevel, "Character level: ", new { @class = "stat-label" })
+        <div class="label-div">
+            @Html.LabelFor(m => m.UserContent.CharacterLevel, "Character level: ", new { @class = "stat-label" })
+        </div>
         <hr />
-        <div class="stat-display">
-            @Html.DisplayFor(m => m.UserContent.CharacterLevel)
+        <div class=display-div>
+            <div class="stat-display">
+                @Html.DisplayFor(m => m.UserContent.CharacterLevel)
+            </div>
         </div>
     </div>
     <div class="stat">
-        @Html.LabelFor(m => m.UserContent.EnemiesDefeated, "Enemies defeated: ", new { @class = "stat-label" })
+        <div class=label-div>
+            @Html.LabelFor(m => m.UserContent.EnemiesDefeated, "Enemies defeated: ", new { @class = "stat-label" })
+        </div>
         <hr />
-        <div class="stat-display">
-            @Html.DisplayFor(m => m.UserContent.EnemiesDefeated)
+        <div class=display-div>
+            <div class="stat-display">
+                @Html.DisplayFor(m => m.UserContent.EnemiesDefeated)
+            </div>
         </div>
     </div>
     <div class="stat">
-        @Html.LabelFor(m => m.UserContent.LevelsCleared, "Levels cleared: ", new { @class = "stat-label" })
+        <div class=label-div>
+            @Html.LabelFor(m => m.UserContent.LevelsCleared, "Levels cleared: ", new { @class = "stat-label" })
+        </div>
         <hr />
-        <div class="stat-display">
-            @Html.DisplayFor(m => m.UserContent.LevelsCleared)
+        <div class=display-div>
+            <div class="stat-display">
+                @Html.DisplayFor(m => m.UserContent.LevelsCleared)
+            </div>
         </div>
     </div>
     <div class="stat">
-        @Html.LabelFor(m => m.UserContent.Deaths, "Player deaths: ", new { @class = "stat-label" })
+        <div class=label-div>
+            @Html.LabelFor(m => m.UserContent.Deaths, "Player deaths: ", new { @class = "stat-label" })
+        </div>
         <hr />
-        <div class="stat-display">
-            @Html.DisplayFor(m => m.UserContent.Deaths)
+        <div class=display-div>
+            <div class="stat-display">
+                @Html.DisplayFor(m => m.UserContent.Deaths)
+            </div>
         </div>
     </div>
     <div class="stat">
-        @Html.LabelFor(m => m.UserContent.FirstPlayed, "First played: ", new { @class = "stat-label" })
+        <div class=label-div>
+            @Html.LabelFor(m => m.UserContent.FirstPlayed, "First played: ", new { @class = "stat-label" })
+        </div>
         <hr />
-        <div class="stat-display">
-            @Html.DisplayFor(m => m.UserContent.FirstPlayed)
+        <div class=display-div>
+            <div class="stat-display">
+                @Html.DisplayFor(m => m.UserContent.FirstPlayed)
+            </div>
         </div>
     </div>
     <div class="stat">
-        @Html.LabelFor(m => m.UserContent.LastPlayed, "Last Played: ", new { @class = "stat-label" })
+        <div class=label-div>
+            @Html.LabelFor(m => m.UserContent.LastPlayed, "Last Played: ", new { @class = "stat-label" })
+        </div>
         <hr />
-        <div class="stat-display">
-            @Html.DisplayFor(m => m.UserContent.LastPlayed)
+        <div class=display-div>
+            <div class="stat-display">
+                @Html.DisplayFor(m => m.UserContent.LastPlayed)
+           </div>
        </div>
     </div>
 </div>

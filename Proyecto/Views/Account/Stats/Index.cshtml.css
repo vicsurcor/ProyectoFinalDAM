@@ -1,15 +1,14 @@
 ﻿.stats-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 50%;
+    height: 75%;
     border-radius: 20px;
     border: 1px groove black;
-    grid-template-areas:
-        "1 2 3"
 }
 .stats-content hr {
     margin: 2px 0px 20px 0px
 }
+
 .stat {
     margin: 15px 15px 15px 15px;
     padding:10px;
@@ -17,10 +16,34 @@
     border-radius: 20px;
     border: 1px groove black;
     height: fit-content;
+    color:white;
+}
+.stat:last-of-type {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+.label-div {
+    background: linear-gradient(45deg, #392B2C, #037A68);
+    border-radius: 5px;
+}
+.stat label {
+    width: 100%;
 }
 .stat * {
     margin-left: 5px
 }
+.display-div {
+    background: linear-gradient(45deg, #392B2C, #392B2C, #6E0023, #6E0023);
+    border-radius: 5px;
+    width: 99%;
+}
 .stat-display {
-    justify-self:center;
+    justify-self: center;
+}
+h2 {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+div nav {
+    background: none;
 }
