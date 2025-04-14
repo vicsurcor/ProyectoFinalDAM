@@ -1,5 +1,5 @@
 ﻿@using Proyecto.Models.User;
-
+@* View para el formulario de Login del Usuario *@
 @{
     ViewData["Title"] = "Login";
 }
@@ -10,6 +10,7 @@
     </styles>
 </head>
 
+@* Visualizacion de Errores en la validacion del formulario*@
 @Html.ValidationSummary("", new { @class = "shared-color validation-summary-errors" })
 
 <h2>Login</h2>

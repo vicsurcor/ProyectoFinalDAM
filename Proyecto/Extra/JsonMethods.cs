@@ -3,14 +3,17 @@ using Proyecto.Models.User;
 
 namespace Proyecto.Extra
 {
+    // Clase que engloba los metodos Json usados en la app.
     public class JsonMethods
     {
-        // Path to the JSON file
+        // Path para los archivos de guardado de la api.
         public static readonly string filePath = "TestData/DataStartUsers.json";
         public static readonly string savePath = "TestData/DataStartSaves.json";
+
+        // Metodo para devolver la lista de usuarios registrados.
         public static List<UserContent> GetJsonUserContents()
         {
-            // Read the JSON file
+            
             string json = "";
             try
             {
@@ -22,12 +25,12 @@ namespace Proyecto.Extra
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
-            /*File.ReadAllText(filePath);*/
+           
 
-            // Deserialize the JSON to a list of users
-            List<UserContent> users = JsonConvert.DeserializeObject<List<UserContent>>(json);
-            return users;
+            return JsonConvert.DeserializeObject<List<UserContent>>(json); ;
         }
+
+        // Metodo para actualizar la list de usuarios de la api.
         public static void UpdateJsonUserContents(List<UserContent> users)
         {
             string json = JsonConvert.SerializeObject(users, Formatting.Indented);
@@ -37,6 +40,8 @@ namespace Proyecto.Extra
                 Console.WriteLine("File overwritten successfully.");
             }
         }
+
+        // Metodo para devolver la lista de archivos de guardado de la api.
         public static List<SaveFile> GetSaveFilesFromJson()
         {
             var jsonFilePath = savePath;

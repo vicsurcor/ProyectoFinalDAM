@@ -6,25 +6,38 @@ using Proyecto.Extra;
 
 namespace Proyecto.Models.User
 {
+    // Modelo que engloba el contenido del Usuario.
     public class UserContent
     {
+        // Ultima id disponible.
         [Newtonsoft.Json.JsonIgnore]
         public static int _LastId = 1;
+        // Id del Contenido.
         public int Id { get; set; }
+        // Usuario al que pertenece el Contenido.
         public User User { get; set; } = new User();
         //[Newtonsoft.Json.JsonIgnore]
+        // Archivos de guardado que posee el Usuario.
         public Dictionary<int, SaveFile> Saves { get; set; } = new Dictionary<int, SaveFile>
         {
             {1, new SaveFile() }
         };
+        // Tiempo jugado del Usuario.
         public double TimePlayed { get; set; } = 10.50;
+        // Enemigos derrotados por el Usuario.
         public int EnemiesDefeated { get; set; } = 0;
+        // Niveles superados por el Usuario.
         public int LevelsCleared { get; set; } = 0;
+        // Nivel actual del Usuario.
         public int CharacterLevel { get; set; } = 0;
+        // Muertes totales del Usuario.
         public int Deaths { get; set; } = 0;
+        // Momento en el que el Usuario jugo al juego por primera vez.
         public DateTime FirstPlayed { get; set; } = DateTime.Now;
+        // Ultimo momento de juego del Usuario.
         public DateTime LastPlayed { get; set; } = DateTime.Now.AddHours(2);
 
+        // Recuento de los Ids al crear un nuevo ContenidoUsuario.
         static UserContent() 
         {
             _LastId = InitializeId.InitializeUserContentIds();
@@ -39,6 +52,7 @@ namespace Proyecto.Models.User
             Id = _LastId;
         }
 
+        // Metodos Json por si son necesarios.
         #region Json
         public UserContent DeserializeUserContent(string json)
         {
@@ -73,6 +87,7 @@ namespace Proyecto.Models.User
         }
         #endregion
 
+        // Metodos auxiliares.
         #region Aux
         public static string DeconstructTime(double timeInHours)
         {

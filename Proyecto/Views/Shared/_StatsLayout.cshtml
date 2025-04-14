@@ -1,5 +1,5 @@
 ﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    Partial View para el Layout de las paginas de Stats.
 *@
 @{
 }
@@ -12,6 +12,7 @@
         </button>
         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
             <ul class="navbar-nav flex-grow-1">
+                @* Visualizacion en caso de que la pagina actual sea el indice u otra pagina accesible desde Stats *@
                 <li class="nav-item @((ViewBag.SecView == "Stats_Index") ? "active": "")">
                     <a class="nav-link text-dark" asp-area="" asp-controller="Stats" asp-action="Index">Stats</a>
                 </li>

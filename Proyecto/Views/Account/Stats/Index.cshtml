@@ -1,8 +1,5 @@
 ﻿@using Proyecto.Models.User;
-
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+@* View para la Visualizacion de los datos guardados del Usuario *@
 @{
     var timePlayed = UserContent.DeconstructTime(Model.UserContent.TimePlayed);
 }
@@ -14,6 +11,7 @@
     }
 }
 <link rel="stylesheet" href="~/Views/Account/Stats/Index.cshtml.css" asp-append-version="true" />
+
 <h2>@(Model.User.UserName)</h2>
 
 <div class="stats-content">

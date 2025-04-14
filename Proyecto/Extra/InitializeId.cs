@@ -2,9 +2,10 @@
 
 namespace Proyecto.Extra
 {
+    // Clase para la Inicializacion de los Id de la api.
     public static class InitializeId
     {
-        
+        // Id Contenido de Usuario.
         public static int InitializeUserContentIds()
         {
             
@@ -12,6 +13,7 @@ namespace Proyecto.Extra
             Console.WriteLine(users.Count);
             return users.Count + 1;
         }
+        // Id Archivos de guardado.
         public static int InitializeSaveFileIds()
         {
             List<UserContent> users = JsonMethods.GetJsonUserContents();
@@ -25,6 +27,7 @@ namespace Proyecto.Extra
             }
             return maxId + 1;
         }
+        // Id Usuario
         public static int InitializeUserIds()
         {
             List<UserContent> users = JsonMethods.GetJsonUserContents();

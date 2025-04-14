@@ -7,15 +7,20 @@ using Proyecto.Models.User.Authentication;
 
 namespace Proyecto.Controllers
 {
+    // Controlador para la gestion del Usuario.
     [Route("[controller]")]
     public class AccountController : Controller
     {
+
         #region Select
+
+        // Accede a la pagina de Login.
         [HttpGet("[action]")]
         public IActionResult Login()
         {
             return View();
         }
+        // Accede a la pagina de registro.
         [HttpGet("[action]")]
         public IActionResult Register()
         {
@@ -24,13 +29,14 @@ namespace Proyecto.Controllers
         #endregion
 
         #region Insert
+
+        // Recoge los datos del formulario, verifica que el usuario existe y las credenciales son correctas, establece el Usuario en la sesion y accede a la pagina de Stats.
+        // En caso de fallo, muestra los errores de validacion del formulario.
         [HttpPost("[action]")]
         public IActionResult Login(User user)
         {
-            // Deserialize the JSON to a list of users
             List<UserContent> users = JsonMethods.GetJsonUserContents();
 
-            // Check if the input user matches any user in the list
             foreach (var _user in users)
             {
                 if (_user.User.UserName == user.UserName && EncryptionMethods.VerifyHash(user.Password, _user.User.Password))
@@ -42,6 +48,9 @@ namespace Proyecto.Controllers
             }
             return View();
         }
+
+        // Recoge los datos del formulario, verifica que el usuario no existe y las contrasenas coinciden, anade el Usuario al archivo y accede a la pagina de Login.
+        // En caso de fallo, muestra los errores de validacion del formulario.
         [HttpPost("[action]")]
         public IActionResult Register(UserRegister user)
         {

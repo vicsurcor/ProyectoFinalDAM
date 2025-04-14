@@ -5,8 +5,10 @@ using Proyecto.Extra;
 
 namespace Proyecto.Controllers
 {
+    // Controlador para los archivos de guardado.
     public class SaveController : Controller
     {
+        // Metodo para la descarga del archivo seleccionado en el View.
         readonly string SavesPath = JsonMethods.savePath;
         [Route("download/{saveId}")]
         public IActionResult DownloadSaveFile(int saveId)
@@ -22,9 +24,5 @@ namespace Proyecto.Controllers
             var contentType = "application/octet-stream";
             return File(fileBytes, contentType, saveFile.Name);
         }
-
-        
-
-
     }
 }

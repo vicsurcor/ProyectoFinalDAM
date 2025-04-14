@@ -19,6 +19,7 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        @* Visualizacion en caso de que la pagina actual sea el indice u otra pagina accesible desde Home *@
                         <li class="nav-item @((ViewBag.CurrentView == "Home_Index") ? "active" : "")">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>

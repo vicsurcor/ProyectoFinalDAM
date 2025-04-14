@@ -3,14 +3,22 @@ using Proyecto.Extra;
 
 namespace Proyecto.Models.User
 {
+    // Modelo que engloba los archivos de guardado.
     public class SaveFile
     {
+        // Ultima id disponible.
         [Newtonsoft.Json.JsonIgnore]
         public static int _LastId = 1;
+        // Id del archivo.
         public int Id { get; set; }
+        // Nombre del archivo.
         public string Name { get; set; } = "TestSave.Json";
+        // Contenido del archivo.
         public string Content { get; set; } = "";
+        // Fecha y hora de realizacion del el guardado.
         public DateTime SaveTime { get; set; } = DateTime.Now;
+
+        // Recuento de Ids al crear un archivo.
         static SaveFile()
         {
             _LastId = InitializeId.InitializeSaveFileIds();
@@ -20,6 +28,7 @@ namespace Proyecto.Models.User
             Id = _LastId;
         }
 
+        // Metodos Json.
         #region Json
         public SaveFile DeserializeSaveFile(string json)
         {
@@ -51,6 +60,7 @@ namespace Proyecto.Models.User
         }
         #endregion
 
+        //Metodos Auxiliares.
         #region Aux
         public string GetName()
         {

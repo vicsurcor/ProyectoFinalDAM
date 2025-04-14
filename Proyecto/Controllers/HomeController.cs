@@ -4,6 +4,7 @@ using Proyecto.Models;
 
 namespace Proyecto.Controllers
 {
+    // Controlador para la pagina principal.
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -13,6 +14,7 @@ namespace Proyecto.Controllers
             _logger = logger;
         }
 
+        // Accede al Index principal y establece la visualizacion de este.
         public IActionResult Index()
         {
             ViewBag.CurrentView = "Home_Index";

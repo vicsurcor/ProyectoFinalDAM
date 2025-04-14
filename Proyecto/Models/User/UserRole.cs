@@ -2,8 +2,10 @@
 
 namespace Proyecto.Models.User
 {
+    // Modelo para los Roles que puede poseer un Usuario.
     public class UserRole
     {
+        // Nombre de el Rol.
         [Required]
         public string Name { get; set; }
 

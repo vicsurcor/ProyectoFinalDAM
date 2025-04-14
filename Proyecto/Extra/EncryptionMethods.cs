@@ -3,6 +3,7 @@ using System.Text;
 
 namespace Proyecto.Extra
 {
+    // Clase que contiene los metodos de seguridad de la api.
     public static class EncryptionMethods
     {
         public static string Hash(string toHash)
@@ -55,6 +56,7 @@ namespace Proyecto.Extra
             return comparer.Compare(hashOfInput, hash) == 0;
         }
 
+        // (Posible que no los use).
         static byte[] EncryptStringToBytes_Aes(string plainText, byte[] Key, byte[] IV)
         {
             // Check arguments.

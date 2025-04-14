@@ -1,4 +1,5 @@
-﻿[
+﻿// Modelo para el Json de guardado de archivos
+[
     {
         "Id": 1,
         "Name": "TestSave1.json",

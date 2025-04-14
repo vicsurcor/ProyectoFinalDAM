@@ -1,5 +1,5 @@
 ﻿@using Proyecto.Models.User.Authentication;
-
+@* View para el formulario de registro del Usuario*@
 @{
     ViewData["Title"] = "Register";
 }
@@ -11,6 +11,7 @@
     </styles>
 </head>
 
+@* Visualizacion de Errores en la validacion del formulario*@
 @Html.ValidationSummary("", new { @class = "shared-color validation-summary-errors" })
 
 <h2>Register</h2>
