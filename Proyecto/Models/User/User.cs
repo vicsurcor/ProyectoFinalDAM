@@ -16,9 +16,6 @@ namespace Proyecto.Models.User
         public string UserEmail { get; set; } = EncryptionMethods.Hash("TestUserEmail@test.com");
         [CustomRequired]
         public string Password { get; set; } = EncryptionMethods.Hash("TestPassword");
-        [JsonIgnore]
-        [CustomRequired, Compare("Password")]
-        public string RePassword { get; set; } = EncryptionMethods.Hash("TestPassword");
         public UserRole UserRole { get; set; } = UserRole.GetUserRole("Client");
 
         static User()
@@ -36,12 +33,11 @@ namespace Proyecto.Models.User
             Password = EncryptionMethods.Hash(password);
             Id = _LastId++;
         }
-        public User(string username, string email, string password, string rePassword)
+        public User(string username, string email, string password)
         {
             UserName = username;
             UserEmail = EncryptionMethods.Hash(email);
             Password = EncryptionMethods.Hash(password);
-            RePassword = EncryptionMethods.Hash(rePassword);
             UserRole = UserRole.GetUserRole("Client");    
             Id = _LastId++;
         }

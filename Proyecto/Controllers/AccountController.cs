@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Proyecto.Models.User;
 using Proyecto.Extensions;
 using Proyecto.Extra;
+using Proyecto.Models.User.Authentication;
 
 namespace Proyecto.Controllers
 {
@@ -42,7 +43,7 @@ namespace Proyecto.Controllers
             return View();
         }
         [HttpPost("[action]")]
-        public IActionResult Register(User user)
+        public IActionResult Register(UserRegister user)
         {
 
             // Deserialize the JSON to a list of users
@@ -64,8 +65,7 @@ namespace Proyecto.Controllers
                     users.Add(new UserContent(new User(
                         user.UserName,
                         user.UserEmail,
-                        user.Password,
-                        user.RePassword
+                        user.Password
                         )));
                     JsonMethods.UpdateJsonUserContents(users);
                     return RedirectToAction("Login", "Account");
