@@ -44,9 +44,18 @@ namespace Proyecto.Extra
         // Metodo para devolver la lista de archivos de guardado de la api.
         public static List<SaveFile> GetSaveFilesFromJson()
         {
-            var jsonFilePath = savePath;
-            var jsonData = System.IO.File.ReadAllText(jsonFilePath);
+            var jsonData = System.IO.File.ReadAllText(savePath);
             return JsonConvert.DeserializeObject<List<SaveFile>>(jsonData);
+        }
+
+        public static void UpdateJsonSavesContents(List<SaveFile> saves)
+        {
+            string json = JsonConvert.SerializeObject(saves, Formatting.Indented);
+            using (StreamWriter writer = new StreamWriter(savePath))
+            {
+                writer.Write(json);
+                Console.WriteLine("File overwritten successfully.");
+            }
         }
     }
 }

@@ -32,8 +32,8 @@ namespace Proyecto.Controllers
 
         // Recoge los datos del formulario, verifica que el usuario existe y las credenciales son correctas, establece el Usuario en la sesion y accede a la pagina de Stats.
         // En caso de fallo, muestra los errores de validacion del formulario.
-        [HttpPost("[action]")]
-        public IActionResult Login(User user)
+        [HttpPost("[action]{source}")]
+        public IActionResult Login(User user, int source)
         {
             List<UserContent> users = JsonMethods.GetJsonUserContents();
 
@@ -41,20 +41,36 @@ namespace Proyecto.Controllers
             {
                 if (_user.User.UserName == user.UserName && EncryptionMethods.VerifyHash(user.Password, _user.User.Password))
                 {
-                    UserViewModel view = new UserViewModel(_user.User, _user);
-                    HttpContext.Session.SetObject("UserModel", view);
-                    return RedirectToAction("Index", "Stats");
+                    if (source == 0)
+                    {
+                        UserViewModel view = new UserViewModel(_user.User, _user);
+                        HttpContext.Session.SetObject("UserModel", view);
+                        return RedirectToAction("Index", "Stats");
+                    }
+                    else if (source == 1)
+                    {
+                        return Ok( new { message = "Successfull Login"});
+                    }
                 }
             }
+            if (source == 0)
+            {
+                return View();
+            }
+            else if (source == 1)
+            {
+                return BadRequest("Username or Password doesnt match");
+            }
+
             return View();
+            
         }
 
         // Recoge los datos del formulario, verifica que el usuario no existe y las contrasenas coinciden, anade el Usuario al archivo y accede a la pagina de Login.
         // En caso de fallo, muestra los errores de validacion del formulario.
-        [HttpPost("[action]")]
-        public IActionResult Register(UserRegister user)
+        [HttpPost("[action]{source}")]
+        public IActionResult Register(UserRegister user, int source)
         {
-
             // Deserialize the JSON to a list of users
             List<UserContent> users = JsonMethods.GetJsonUserContents();
 
@@ -63,11 +79,27 @@ namespace Proyecto.Controllers
             {
                 if (_user.User.UserName == user.UserName)
                 {
-                    return View();
+                    if (source == 0)
+                    {
+                        return View();
+                    }
+                    else if (source == 1)
+                    {
+                        return BadRequest("User already exists");
+                    }
+                    
                 }
                 else if (!ModelState.IsValid)
                 {
-                    return View(user);
+                    if (source == 0) 
+                    {
+                        return View(user);
+                    }
+                    else if (source == 1)
+                    {
+                        return BadRequest("Fields are empty or dont match the requirements");
+                    }
+                    
                 }
                 else
                 {
@@ -77,12 +109,26 @@ namespace Proyecto.Controllers
                         user.Password
                         )));
                     JsonMethods.UpdateJsonUserContents(users);
-                    return RedirectToAction("Login", "Account");
+                    if (source == 0)
+                    {
+                        return RedirectToAction("Login", "Account");
+                    }
+                    else if (source == 1)
+                    {
+                        return Ok("Registration successfull");
+                    }
+                    
                 }
             }
-            
+            if (source == 0)
+            {
+                return View();
+            }
+            else if (source == 1)
+            {
+                return BadRequest();
+            }
             return View();
-
         }
 
         #endregion

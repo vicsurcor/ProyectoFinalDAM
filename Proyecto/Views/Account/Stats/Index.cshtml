@@ -1,7 +1,9 @@
 ﻿@using Proyecto.Models.User;
 @* View para la Visualizacion de los datos guardados del Usuario *@
 @{
-    var timePlayed = UserContent.DeconstructTime(Model.UserContent.TimePlayed);
+    
+    UserContent data = UserContent.UpdateContent(Model.UserContent);
+    var timePlayed = UserContent.DeconstructTime(data.TimePlayed);
 }
 @model UserViewModel
 @if (ViewBag.SecondaryLayout != null)
@@ -28,45 +30,45 @@
     </div>
     <div class="stat">
         <div class="label-div">
-            @Html.LabelFor(m => m.UserContent.CharacterLevel, "Character level: ", new { @class = "stat-label" })
+            @Html.LabelFor(m => data.CharacterLevel, "Character level: ", new { @class = "stat-label" })
         </div>
         <hr />
         <div class=display-div>
             <div class="stat-display">
-                @Html.DisplayFor(m => m.UserContent.CharacterLevel)
+                @Html.DisplayFor(m => data.CharacterLevel)
             </div>
         </div>
     </div>
     <div class="stat">
         <div class=label-div>
-            @Html.LabelFor(m => m.UserContent.EnemiesDefeated, "Enemies defeated: ", new { @class = "stat-label" })
+            @Html.LabelFor(m => data.EnemiesDefeated, "Enemies defeated: ", new { @class = "stat-label" })
         </div>
         <hr />
         <div class=display-div>
             <div class="stat-display">
-                @Html.DisplayFor(m => m.UserContent.EnemiesDefeated)
+                @Html.DisplayFor(m => data.EnemiesDefeated)
             </div>
         </div>
     </div>
     <div class="stat">
         <div class=label-div>
-            @Html.LabelFor(m => m.UserContent.LevelsCleared, "Levels cleared: ", new { @class = "stat-label" })
+            @Html.LabelFor(m => data.LevelsCleared, "Levels cleared: ", new { @class = "stat-label" })
         </div>
         <hr />
         <div class=display-div>
             <div class="stat-display">
-                @Html.DisplayFor(m => m.UserContent.LevelsCleared)
+                @Html.DisplayFor(m => data.LevelsCleared)
             </div>
         </div>
     </div>
     <div class="stat">
         <div class=label-div>
-            @Html.LabelFor(m => m.UserContent.Deaths, "Player deaths: ", new { @class = "stat-label" })
+            @Html.LabelFor(m => data.Deaths, "Player deaths: ", new { @class = "stat-label" })
         </div>
         <hr />
         <div class=display-div>
             <div class="stat-display">
-                @Html.DisplayFor(m => m.UserContent.Deaths)
+                @Html.DisplayFor(m => data.Deaths)
             </div>
         </div>
     </div>
@@ -83,12 +85,12 @@
     </div>
     <div class="stat">
         <div class=label-div>
-            @Html.LabelFor(m => m.UserContent.LastPlayed, "Last Played: ", new { @class = "stat-label" })
+            @Html.LabelFor(m => data.LastPlayed, "Last Played: ", new { @class = "stat-label" })
         </div>
         <hr />
         <div class=display-div>
             <div class="stat-display">
-                @Html.DisplayFor(m => m.UserContent.LastPlayed)
+                @Html.DisplayFor(m => data.LastPlayed)
            </div>
        </div>
     </div>

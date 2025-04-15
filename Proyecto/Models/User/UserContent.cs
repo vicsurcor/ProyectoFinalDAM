@@ -23,7 +23,7 @@ namespace Proyecto.Models.User
             {1, new SaveFile() }
         };
         // Tiempo jugado del Usuario.
-        public double TimePlayed { get; set; } = 10.50;
+        public double TimePlayed { get; set; } = 0;
         // Enemigos derrotados por el Usuario.
         public int EnemiesDefeated { get; set; } = 0;
         // Niveles superados por el Usuario.
@@ -33,9 +33,9 @@ namespace Proyecto.Models.User
         // Muertes totales del Usuario.
         public int Deaths { get; set; } = 0;
         // Momento en el que el Usuario jugo al juego por primera vez.
-        public DateTime FirstPlayed { get; set; } = DateTime.Now;
+        public DateTime FirstPlayed { get; set; } = DateTime.MinValue;
         // Ultimo momento de juego del Usuario.
-        public DateTime LastPlayed { get; set; } = DateTime.Now.AddHours(2);
+        public DateTime LastPlayed { get; set; } = DateTime.MinValue.AddHours(2);
 
         // Recuento de los Ids al crear un nuevo ContenidoUsuario.
         static UserContent() 
@@ -52,7 +52,50 @@ namespace Proyecto.Models.User
             Id = _LastId;
         }
 
+        public UserContent(double timePlayed, int enemiesDefeated, int levelsCleared, int characterLevel, int deaths, DateTime firstPlayed, DateTime lastPlayed)
+        {
+            TimePlayed = timePlayed;
+            EnemiesDefeated = enemiesDefeated;
+            LevelsCleared = levelsCleared;
+            CharacterLevel = characterLevel;
+            Deaths = deaths;
+            FirstPlayed = firstPlayed;
+            LastPlayed = lastPlayed;
+        }
+
+        //private struct SaveContent
+        //{
+        //    // Tiempo jugado del Usuario.
+        //    public double TimePlayed;
+        //    // Enemigos derrotados por el Usuario.
+        //    public int EnemiesDefeated;
+        //    // Niveles superados por el Usuario.
+        //    public int LevelsCleared;
+        //    // Nivel actual del Usuario.
+        //    public int CharacterLevel;
+        //    // Muertes totales del Usuario.
+        //    public int Deaths;
+        //    // Momento en el que el Usuario jugo al juego por primera vez.
+        //    public DateTime FirstPlayed;
+        //    // Ultimo momento de juego del Usuario.
+        //    public DateTime LastPlayed;
+        //}
+
+
         // Metodos Json por si son necesarios.
+
+        public static UserContent UpdateContent(UserContent user)
+        {
+            List<UserContent> users = JsonMethods.GetJsonUserContents();
+            List<SaveFile> saves = users[users.IndexOf(user) + 1].Saves.Values.ToList();
+            List<UserContent> newData = new List<UserContent>();
+            foreach (var _save in saves)
+            {
+                newData.Add(user.DeserializeUserContent(_save.GetContent()));
+            }
+            return CallAddSaveValues(newData);
+        }
+
         #region Json
         public UserContent DeserializeUserContent(string json)
         {
@@ -104,25 +147,90 @@ namespace Proyecto.Models.User
         {
             if (save != null)
             {
-                if (Saves.TryGetValue(save.Id, out SaveFile _save) && save.SaveTime > _save.SaveTime)
+                if (Saves.Count < 3) 
                 {
-                    Saves[save.Id] = save;
-                    return true;
+                    foreach (var _save in Saves)
+                    {
+                        if (_save.Value.Id == save.Id && save.SaveTime > _save.Value.SaveTime)
+                        {
+                            Saves[_save.Key] = save;
+                            return true;
+                        }
+                    }
+                    if (!Saves.ContainsKey(save.Id))
+                    {
+                        Saves.TryAdd(save.Id, save);
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
-                else if (!Saves.ContainsKey(save.Id))
+                else if (Saves.Count == 3)
                 {
-                    Saves.Add(save.Id, save);
-                    return true;
+                    SaveFile oldestSave = null;
+                    int oldestKey = 0;
+                    foreach (var _save in Saves)
+                    {
+                        if (oldestSave == null || _save.Value.SaveTime < oldestSave.SaveTime)
+                        {
+                            oldestSave = _save.Value;
+                            oldestKey = _save.Key;
+                        }
+                    }
+                    if (oldestKey != 0)
+                    {
+                        Saves[oldestKey] = save;
+                        return true;
+                    }
                 }
-                else
-                {
-                    return false;
-                }
+                return false;
+                
             }
             else
             {
                 throw new NullReferenceException();
             }
+
+        }
+
+        public static UserContent CallAddSaveValues(List<UserContent> users)
+        {
+            UserContent param1 = users.Count > 0 ? users[0] : new UserContent();
+            UserContent param2 = users.Count > 1 ? users[1] : new UserContent();
+            UserContent param3 = users.Count > 2 ? users[2] : new UserContent();
+
+            return AddSaveValues(param1, param2, param3);
+        }
+        public static UserContent AddSaveValues(UserContent content1, UserContent content2, UserContent content3)
+        {
+            double timePlayed = 0;
+            int enemiesDefeated = 0;
+            int levelsCleared = 0;
+            int characterLevel = 0;
+            int deaths = 0;
+            DateTime lastPlayed = DateTime.Now;
+            List<UserContent> list = [content1,content2,content3];
+            foreach (var _user in list)
+            {
+                timePlayed += _user.TimePlayed;
+                enemiesDefeated += _user.EnemiesDefeated;
+                levelsCleared += _user.LevelsCleared;
+                deaths += _user.Deaths;
+                if (characterLevel < _user.CharacterLevel) 
+                {
+                    characterLevel = _user.CharacterLevel;
+                }
+                if (lastPlayed < _user.LastPlayed) 
+                {
+                    lastPlayed = _user.LastPlayed;
+                }
+
+            }
+            return new UserContent (timePlayed, enemiesDefeated, levelsCleared, characterLevel, deaths, DateTime.MinValue, lastPlayed);
+            
+            
 
         }
         #endregion
