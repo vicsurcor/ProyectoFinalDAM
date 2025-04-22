@@ -16,7 +16,4 @@
             UserContent = userContent;
         }
     }
-
-    
-
 }

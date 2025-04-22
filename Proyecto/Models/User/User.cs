@@ -34,7 +34,7 @@ namespace Proyecto.Models.User
         {
             Id = _LastId;
         }
-
+        // Constructores de Usuario.
         public User(string username, string password)
         {
             UserName = username;

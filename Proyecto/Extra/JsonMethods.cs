@@ -30,7 +30,7 @@ namespace Proyecto.Extra
             return JsonConvert.DeserializeObject<List<UserContent>>(json); ;
         }
 
-        // Metodo para actualizar la list de usuarios de la api.
+        // Metodo para actualizar la lista de usuarios de la api.
         public static void UpdateJsonUserContents(List<UserContent> users)
         {
             string json = JsonConvert.SerializeObject(users, Formatting.Indented);
@@ -48,6 +48,7 @@ namespace Proyecto.Extra
             return JsonConvert.DeserializeObject<List<SaveFile>>(jsonData);
         }
 
+        // Metodo para actualizar la lista de archivos de guardado de la api.
         public static void UpdateJsonSavesContents(List<SaveFile> saves)
         {
             string json = JsonConvert.SerializeObject(saves, Formatting.Indented);

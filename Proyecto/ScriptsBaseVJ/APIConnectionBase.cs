@@ -14,7 +14,7 @@ namespace Proyecto.ScriptsBaseVJ
 
         //        async void Start()
         //        {
-        //            string result = await GetRequest("https://jsonplaceholder.typicode.com/todos/1");
+        //            string result = await GetRequest("");
         //            Debug.Log(result);
         //        }
 

@@ -46,12 +46,12 @@ namespace Proyecto.Models.User
         {
             Id = _LastId;
         }
+        // Constructores de Contenido de Usuario.
         public UserContent(User user)
         {
             this.User = user;
             Id = _LastId;
         }
-
         public UserContent(double timePlayed, int enemiesDefeated, int levelsCleared, int characterLevel, int deaths, DateTime firstPlayed, DateTime lastPlayed)
         {
             TimePlayed = timePlayed;
@@ -82,20 +82,10 @@ namespace Proyecto.Models.User
         //}
 
 
+        
+
+        
         // Metodos Json por si son necesarios.
-
-        public static UserContent UpdateContent(UserContent user)
-        {
-            List<UserContent> users = JsonMethods.GetJsonUserContents();
-            List<SaveFile> saves = users[users.IndexOf(user) + 1].Saves.Values.ToList();
-            List<UserContent> newData = new List<UserContent>();
-            foreach (var _save in saves)
-            {
-                newData.Add(user.DeserializeUserContent(_save.GetContent()));
-            }
-            return CallAddSaveValues(newData);
-        }
-
         #region Json
         public UserContent DeserializeUserContent(string json)
         {
@@ -128,6 +118,17 @@ namespace Proyecto.Models.User
                 throw new NullReferenceException();
             }
         }
+        public static UserContent UpdateContent(UserContent user)
+        {
+            List<UserContent> users = JsonMethods.GetJsonUserContents();
+            List<SaveFile> saves = users[users.IndexOf(user) + 1].Saves.Values.ToList();
+            List<UserContent> newData = new List<UserContent>();
+            foreach (var _save in saves)
+            {
+                newData.Add(user.DeserializeUserContent(_save.GetContent()));
+            }
+            return CallAddSaveValues(newData);
+        }
         #endregion
 
         // Metodos auxiliares.
@@ -142,7 +143,6 @@ namespace Proyecto.Models.User
 
             return $"{hours} Hours, {minutes} minutes, {seconds} seconds";
         }
-
         public bool AddSave(SaveFile save)
         {
             if (save != null)
@@ -194,7 +194,6 @@ namespace Proyecto.Models.User
             }
 
         }
-
         public static UserContent CallAddSaveValues(List<UserContent> users)
         {
             UserContent param1 = users.Count > 0 ? users[0] : new UserContent();

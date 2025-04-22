@@ -8,6 +8,7 @@ namespace Proyecto.Controllers
     // Controlador para los archivos de guardado.
     public class SaveController : Controller
     {
+        // Metodo para anadir un archivo de guardado al usuario correspondiente.
         [Route("Saves/add")]
         public IActionResult AddSaveFile(User user, SaveFile saveFile)
         {
