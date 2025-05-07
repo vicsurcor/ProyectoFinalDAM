@@ -37,6 +37,9 @@ namespace Proyecto.Models.User
         // Ultimo momento de juego del Usuario.
         public DateTime LastPlayed { get; set; } = DateTime.MinValue.AddHours(2);
 
+        //TODO: Add Inventory to UserContent.
+        //TODO: Add SkillTree to UserContent.
+
         // Recuento de los Ids al crear un nuevo ContenidoUsuario.
         static UserContent() 
         {
@@ -61,6 +64,8 @@ namespace Proyecto.Models.User
             Deaths = deaths;
             FirstPlayed = firstPlayed;
             LastPlayed = lastPlayed;
+            //Inventory 
+            //SkillTree
         }
 
         //private struct SaveContent
@@ -82,9 +87,9 @@ namespace Proyecto.Models.User
         //}
 
 
-        
 
-        
+
+
         // Metodos Json por si son necesarios.
         #region Json
         public UserContent DeserializeUserContent(string json)
@@ -100,6 +105,8 @@ namespace Proyecto.Models.User
                 Deaths = obj.Deaths;
                 FirstPlayed = obj.FirstPlayed;
                 LastPlayed = obj.LastPlayed;
+                //Inventory
+                //SkillTree
                 return obj;
             }
             else
